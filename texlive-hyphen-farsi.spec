@@ -1,5 +1,11 @@
+# revision 23085
+# category TLCore
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-hyphen-farsi
-Version:	20111102
+Version:	20111103
 Release:	1
 Summary:	(No) Persian hyphenation patterns
 Group:		Publishing
@@ -46,6 +52,7 @@ Prevent hyphenation in Persian.
 %_texmf_language_dat_d/hyphen-farsi
 %_texmf_language_def_d/hyphen-farsi
 %_texmf_language_lua_d/hyphen-farsi
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,6 +61,8 @@ Prevent hyphenation in Persian.
 %build
 
 %install
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-farsi <<EOF
 %% from hyphen-farsi:
