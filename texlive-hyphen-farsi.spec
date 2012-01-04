@@ -44,13 +44,13 @@ Prevent hyphenation in Persian.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-farsi <<EOF
-%% from hyphen-farsi:
+\%\% from hyphen-farsi:
 farsi zerohyph.tex
 =persian
 EOF
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-farsi <<EOF
-%% from hyphen-farsi:
+\%\% from hyphen-farsi:
 \addlanguage{farsi}{zerohyph.tex}{}{2}{3}
 \addlanguage{persian}{zerohyph.tex}{}{2}{3}
 EOF
