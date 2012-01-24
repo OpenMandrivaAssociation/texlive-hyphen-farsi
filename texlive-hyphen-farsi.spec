@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-hyphen-farsi
-Version:	20111103
-Release:	2
+Version:	20120124
+Release:	1
 Summary:	(No) Persian hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -44,16 +44,18 @@ Prevent hyphenation in Persian.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-farsi <<EOF
-\%\% from hyphen-farsi:
+\%% from hyphen-farsi:
 farsi zerohyph.tex
 =persian
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_dat_d}/hyphen-farsi
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-farsi <<EOF
-\%\% from hyphen-farsi:
+\%% from hyphen-farsi:
 \addlanguage{farsi}{zerohyph.tex}{}{2}{3}
 \addlanguage{persian}{zerohyph.tex}{}{2}{3}
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_def_d}/hyphen-farsi
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
 cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-farsi <<EOF
 -- from hyphen-farsi:
