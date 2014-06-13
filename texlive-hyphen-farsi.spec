@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-hyphen-farsi
 Version:	20120124
-Release:	5
+Release:	6
 Summary:	(No) Persian hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
