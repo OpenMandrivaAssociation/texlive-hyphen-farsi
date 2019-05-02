@@ -5,7 +5,7 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-hyphen-farsi
-Version:	20180303
+Version:	20190406
 Release:	1
 Summary:	(No) Persian hyphenation patterns
 Group:		Publishing
