@@ -1,6 +1,6 @@
 Name:		texlive-hyphen-farsi
 Version:	54568
-Release:	1
+Release:	2
 Summary:	(No) Persian hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
